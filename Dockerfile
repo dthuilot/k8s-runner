@@ -27,8 +27,7 @@ WORKDIR /home/github
 #    && sudo ./bin/installdependencies.sh
 
 # Download the latest runner package
-RUN curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz | tar xzf \
-    && sudo ./bin/installdependencies.sh
+RUN curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz | tar xz && sudo ./bin/installdependencies.sh
 
 COPY --chown=github:github entrypoint.sh ./entrypoint.sh
 RUN sudo chmod u+x ./entrypoint.sh
