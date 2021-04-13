@@ -23,12 +23,6 @@ RUN apt-get update \
 USER github
 WORKDIR /home/github
 
-# RUN curl -Ls https://github.com/actions/runner/releases/download/v${GITHUB_RUNNER_VERSION}/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz | tar xz \
-#    && sudo ./bin/installdependencies.sh
-
-# Download the latest runner package
-# RUN curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-${GITHUB_RUNNER_VERSION}.tar.gz | tar xz && sudo ./bin/installdependencies.sh
-
 # Download the latest runner package
 RUN curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-2.277.1.tar.gz
 RUN tar xzf ./actions-runner-linux-x64-2.277.1.tar.gz
