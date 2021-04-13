@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: github-runner
-        image: sanderknape/github-runner:latest
+        image: docker.pkg.github.com/dthuilot/k8s-runner/k8s-runner:v0.01
         env:
         - name: GITHUB_OWNER
           value: your-organization
