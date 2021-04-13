@@ -33,8 +33,8 @@ WORKDIR /home/github
 RUN curl -O -L https://github.com/actions/runner/releases/download/v2.277.1/actions-runner-linux-x64-2.277.1.tar.gz
 RUN tar xzf ./actions-runner-linux-x64-2.277.1.tar.gz
 
-RUN ls -lah
-RUN pwd
+# Runner
+RUN sudo ./bin/installdependencies.sh
 
 COPY --chown=github:github entrypoint.sh ./entrypoint.sh
 RUN sudo chmod u+x ./entrypoint.sh
